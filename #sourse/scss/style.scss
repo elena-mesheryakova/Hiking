@@ -16,7 +16,7 @@ body {
     text-align: center;
     align-items: center;
     padding-top: 20px;
-
+    position: relative;
     &__nav {
       margin-left: auto;
 
@@ -55,6 +55,12 @@ body {
         position: absolute;
         top: 10px;
         right: 15px;
+      }
+    }
+    .header__burger-menu {
+      display: none;
+      @media (max-width: 990px) {
+        display: block;
       }
     }
   }
@@ -267,6 +273,7 @@ body {
   .info {
     &__banner {
       min-width: 100%;
+      width: 100%;
     }
     background: url("../images/Shadow2.png") center left no-repeat;
     background-color: #99928d;
@@ -288,6 +295,7 @@ body {
   }
   .banner__center-img {
     min-width: 100%;
+    width: 100%;
   }
 
   //BLOG==============================
@@ -325,7 +333,7 @@ body {
         font-size: 25px;
         line-height: 1.2;
         text-align: center;
-        width: 900px;
+
         padding-bottom: 50px;
       }
       &-autor {
@@ -340,6 +348,7 @@ body {
   .request {
     .banner-shape {
       min-width: 100%;
+      width: 100%;
     }
     background-color: #deb37e;
     text-align: center;
@@ -390,15 +399,21 @@ body {
     background-color: #7f7770;
     .banner-shape {
       min-width: 100%;
+      width: 100%;
       margin-top: -200px;
     }
     .footer__wrapper {
       display: flex;
     }
     .footer__block {
-      width: 50%;
       padding-top: 150px;
       padding-bottom: 240px;
+      &.left {
+        width: 45%;
+      }
+      &.right {
+        width: 60%;
+      }
     }
     .footer__info {
       color: #fff;
@@ -408,9 +423,9 @@ body {
         padding-bottom: 40px;
       }
       &-text {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.2;
-        padding-bottom: 40px;
+        padding-bottom: 60px;
       }
       &-social {
         img {
@@ -422,6 +437,10 @@ body {
       display: flex;
       justify-content: space-between;
       color: #fff;
+      .footer__list {
+        width: 220px;
+      }
+
       .footer__list-title {
         font-size: 30px;
         padding-bottom: 40px;
@@ -430,7 +449,7 @@ body {
         padding-bottom: 20px;
       }
       .footer__list-link {
-        font-size: 20px;
+        font-size: 18px;
 
         color: #fff;
         &:hover {
@@ -441,3 +460,4 @@ body {
     }
   }
 }
+@import "media.scss";

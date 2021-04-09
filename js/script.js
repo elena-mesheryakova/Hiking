@@ -13,4 +13,10 @@ $(function(){
 		e.preventDefault();
 		$.magnificPopup.close();
 	});
+	$(document).ready(function() {
+		$('.header__burger-menu').click(function() {
+			$('.header__burger-menu').toggleClass('open-menu');
+			$('.header__nav').toggleClass('open-menu');
+		});
+	});
 });
